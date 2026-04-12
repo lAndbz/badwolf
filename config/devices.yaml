@@ -1,0 +1,11 @@
+devices:
+  - name: CoreSW1
+    type: huawei_switch
+    management_ip: 10.0.0.2
+    area: A区
+    uplink: AggSW1
+    vlan: 10
+    critical: true
+    test_ports: [22, 443]
+    web_url: https://10.0.0.2
+    ssh_diagnosis: true

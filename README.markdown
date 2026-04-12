@@ -97,3 +97,28 @@ are a very subjective topic -- we don't all have the same taste.
 
 **If you're going to send a pull request that you want me to merge, please post
 a comment in it with before/after screenshots!**
+
+## Network Auto-Diagnosis MVP (Python)
+
+This repository now includes a Python MVP under `main.py` + `netdiag/` for factory/campus network diagnosis.
+
+### Quick start
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python main.py 192.168.1.10 --port 443 --tracert --https
+```
+
+### SSH read-only diagnosis (Huawei first)
+
+```bash
+python main.py 10.0.0.2 --ssh --ssh-username ops --ssh-password '***' --ssh-ports GigabitEthernet0/0/1
+```
+
+### Notes
+
+- Read-only command whitelist is enforced in `netdiag/ssh_reader.py`.
+- Dangerous configuration commands are explicitly blocked.
+- A TXT report is generated under `reports/`.
