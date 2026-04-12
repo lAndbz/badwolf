@@ -1,0 +1,7 @@
+hostname: CoreSW1
+vlans: [10, 20, 30]
+trunks:
+  - Eth-Trunk1
+services:
+  ntp: true
+  snmp: true
