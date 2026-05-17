@@ -35,6 +35,26 @@ what you're in for.
 
 ![Screenshot](http://i.imgur.com/J56VS.png)
 
+
+Ubuntu 26.04 Vim configuration
+------------------------------
+
+This repository includes a plugin-free `vimrc` suitable for Ubuntu 26.04 development hosts.  It enables Vim syntax highlighting, filetype detection, filetype plugins, and language-aware indentation for Bash, Python, JavaScript/TypeScript, JSON, YAML, Markdown, Dockerfiles, systemd unit files, and other common formats.
+
+Install it with:
+
+```bash
+cp vimrc ~/.vimrc
+mkdir -p ~/.vim/colors
+cp colors/badwolf.vim ~/.vim/colors/
+```
+
+Or test it directly from this checkout without installing:
+
+```bash
+vim -Nu ./vimrc path/to/file.py
+```
+
 Configuration
 -------------
 
